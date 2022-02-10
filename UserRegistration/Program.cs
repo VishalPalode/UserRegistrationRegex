@@ -15,7 +15,7 @@ namespace UserRegistration
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Enter Program number to get executed \n1. Validate first name \n2. Validate last name \n3. Validate EmailID \n4. Validate Mobile No.  \n5. Exit");
+                Console.WriteLine("Enter Program number to get executed \n1. Validate first name \n2. Validate last name \n3. Validate EmailID \n4. Validate Mobile No. \n5. Validate Passward \n6. Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -48,6 +48,12 @@ namespace UserRegistration
                         mobilenumpattern.Checkmobilenum(mobilenum);
                         break;
                     case 5:
+                        Console.WriteLine("Enter Passward :");
+                        string passward = Console.ReadLine();
+                        ValidRegex passwardruleone = new ValidRegex();
+                        passwardruleone.Checkpassward(passward);
+                        break;
+                    case 6:
                         flag = false;
                         break;
                     default:

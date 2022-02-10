@@ -31,7 +31,9 @@ namespace UserRegistration
             if (Regex.IsMatch(Emailid, emailpattern))
                 Console.WriteLine("Email id is valid");
             else
-                Console.WriteLine("Invalid email id!!");
+                Console.WriteLine("Invalid name!!");
+
+            Console.WriteLine("Invalid email id!!");
         }
         public void Checkmobilenum(string Mobilenum)
         {
@@ -40,6 +42,14 @@ namespace UserRegistration
                 Console.WriteLine("Mobile number is valid");
             else
                 Console.WriteLine("Invalid mobile number!!");
+        }
+        public void Checkpassward(string Passward)
+        {
+            string passwardpattern = "^[A-Za-z0-9]{8,20}$";
+            if (Regex.IsMatch(Passward, passwardpattern))
+                Console.WriteLine("Passward is valid");
+            else
+                Console.WriteLine("Invalid passward!!");
         }
     }
     
